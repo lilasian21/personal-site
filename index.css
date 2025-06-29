@@ -1,49 +1,85 @@
-body {
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(#0f0f0f, #1a1a1a);
-  color: #00ffe0;
-  margin: 0;
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
+@import "tailwindcss"
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 7%;
+    --foreground: 210 40% 98%;
+    --card: 220 20% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 20% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 195 91% 59%;
+    --primary-foreground: 220 20% 7%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 220 15% 18%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 195 80% 94%;
+    --radius: 0.75rem;
+  }
 }
-header {
-  text-align: center;
-  margin-bottom: 2rem;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
-header img {
-  width: 140px;
-  border-radius: 50%;
-  box-shadow: 0 0 15px #00ffe0;
+
+.gradient-text {
+  background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-h1, h2 {
-  color: #ff007c;
-  text-shadow: 0 0 5px #ff007c;
+
+.gradient-bg {
+  background: linear-gradient(135deg, #00C9FF 0%, #00A8E8 100%);
 }
-section {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-left: 3px solid #00ffe0;
-  border-radius: 5px;
+
+.glass-effect {
+  background: rgba(22, 28, 41, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.skills ul, .experience ul {
-  list-style-type: none;
-  padding: 0;
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
 }
-.skills li, .experience li {
-  padding: 0.3rem 0;
-  border-bottom: 1px dotted #555;
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
-footer {
-  text-align: center;
-  color: #888;
-  font-size: 0.85rem;
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite alternate;
 }
-a {
-  color: #ff007c;
-  text-decoration: none;
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 15px rgba(0, 201, 255, 0.3);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(0, 201, 255, 0.6);
+  }
 }
-a:hover {
-  text-shadow: 0 0 5px #00ffe0;
+
+html {
+  scroll-behavior: smooth;
 }
