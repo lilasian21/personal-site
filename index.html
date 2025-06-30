@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lance's Resume</title>
-  <link rel="stylesheet" href="index.css" />
-</head>
+<title>Lance Rosengarten - Personal Website</title>
 <body>
   <header>
-    <img src="assets/profile.jpg" alt="Lance's photo">
-    <h1>Lance [Last Name]</h1>
-    <p></p>
+    <img src="assets/profile.jpg" alt="Lance's avatar">
+    <h1 id="glitch">Lance Rosengarten</h1>
+    <p id="typing-text"></p>
+    <link rel="stylesheet" href="index.css" />
   </header>
 
-  <section class="contact">
-    <p>📧 lance.rosengarten@outlook.com | 🌐 Linkedin.com/in/lance-rosengarten | 📍 Colorado, USA</p>
+  <section id="profile">
+    <h2>ABOUT ME</h2>
+    <p>A vigilant and analytical cybersecurity professional with a passion for digital defense. My experience is rooted in creating secure environments, responding to incidents, and staying ahead of emerging threats. I thrive on the challenge of protecting critical information and infrastructure.</p>
   </section>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p></p>
-  </section>
-
-  <section class="experience">
-    <h2>Experience</h2>
+  <section id="skills">
+    <h2>SKILLS</h2>
     <ul>
-      <li><strong>Job Title</strong> — Company<br><small>Dates</small><br>Description...</li>
-      <li><strong>Another Role</strong> — Company<br><small>Dates</small><br>Description...</li>
+      <li>Certifications & Standards: NIST SP 800-53A Rev 5, CMMC, ISO 27001, CIS CSAT, CompTIA Security+ Certifications</li>
+      <li>Security Operations: Incident Detection and Response, SIEM, Vulnerability scanning, Remediation, Risk Assessments, Security Event Monitoring, Security Tools Management, Information Security Knowledge, Networking Knowledge</li>
+      <li>Technical Tools & Platforms: CyberArk, CrowdStrike, Rapid7, JumpCloud, Splunk, Zendesk, ServiceNow, Elastic Stack, Salesforce.com, Citrix, Window OS, Linux, MDM, IAM, MS Office Proficiency</li>
+      <li>Core Competencies: Troubleshooting, Cybersecurity, Project Management, Time Management, Communication, Problem Solving, Problem Resolution Skills, Mentorship & Leadership, Active Listener, Meticulous, Customer Service, People Skills, Training & Awareness </li>   
     </ul>
   </section>
 
-  <section class="skills">
-    <h2>Skills</h2>
+  <section id="experience">
+    <h2>EXPERIENCE</h2>
     <ul>
-      <li>Graphic Design</li>
-      <li>HTML/CSS/JavaScript</li>
-      <li>Creative Writing</li>
+      <li><strong>Cybersecurity Analyst</strong> – CommonSpirit Health<br><small>Feb 2025–Jun 2025</small><br><br>Conducted audit reports on baseline builds for Windows Servers, MacOS, Linux assets, and network devices; ensured compliance with CIS controls, organizational standards, and industry requirements, aligning with data protection best practices.</li>
+      <li><strong>Cybersecurity Consultant</strong> – Cyvergance.AI<br><small>Mar 2023–Mar 2025</small><br><br>Spearhead risk mitigation efforts. Handle IAM and SIEM tool incident monitoring and response, JumpCloud administration and continuous monitoring. Presented on CIS Controls and Cybersecurity current events. Develop written policies and procedures based on NIST.</li>
+      <li><strong>Sales Support</strong> – Johnson Controls, Inc.<br><small>Sept 2015–Feb 2025</small><br><br>Dispatched on alarms, performed technical troubleshooting, support Salesforce.com, contract negotiations, customer retention, oversaw billing dispute, and processed and researched payments. Managed BBB and social media complaints, and customer escalations from CEO and VPs and managed different projects. </li>
     </ul>
+  </section>
+
+  <section id="hackthebox">
+  <h2>HACK THE BOX PROFILE</h2>
+  <div class="portfolio-grid">
+      <div class="project-card"><h3>Hack The Box Labs</h3><p>    Penetration testing enthusiast on HTB. <br>
+    Rank: Hacker | Global Rank: 898</p></div>
+      <div class="project-card"><h3>Hack The Box - Academy</h3><p> Ranking: Top 1% | Targets Compromised: 212</p></div>
+    </div>
+    <br>
+    <br>
+  <a href="https://app.hackthebox.com/profile/951660" target="_blank">🔗 View my HTB Profile</a>
+  <br>
+  <a href="assets/HTB_Academy_Student_Transcript.pdf" download onclick="HTBinfoAlert()">📄 Download HTB Transcript</a>
+
+</section>
+
+
+  <section id="education">
+    <h2>EDUCATION</h2>
+    <p>Westwood College - Studied game software development and IT.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2> Home Labs/Projects</h2>
+    <div class="portfolio-grid">
+      <div class="project-card"><h3>Various Virtual Machines</h3><p>Multiple VMs with Windows Server, Ubuntu, Kali and ParrotOS</p></div>
+      <div class="project-card"><h3>Hardware</h3><p>TP Link router for penetration testing, Netgear Switch GS10BE, and WIFI Pineapple.</p></div>
+    </div>
+  </section>
+  
+  <section id="CONTACT">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:lance.rosengarten@outlook.com">lance.rosengarten@outlook.com</a><br>Location: Milliken, CO</p>
+  </section>
+
+  <section id="download">
+    <a href="assets/Lance_Resume.pdf" download onclick="resumeAlert()">📄 Download Resume</a>
   </section>
 
   <footer>
-    <p>© Lance [Last Name] 2025</p>
+    <p>© Lance Rosengarten 2025</p>
   </footer>
 </body>
-</html>
