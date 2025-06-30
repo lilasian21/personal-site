@@ -1,85 +1,96 @@
-@import "tailwindcss"
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-@layer base {
-  :root {
-    --background: 220 20% 7%;
-    --foreground: 210 40% 98%;
-    --card: 220 20% 11%;
-    --card-foreground: 210 40% 98%;
-    --popover: 220 20% 7%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 195 91% 59%;
-    --primary-foreground: 220 20% 7%;
-    --secondary: 220 15% 18%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 220 15% 18%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 220 15% 18%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 195 80% 94%;
-    --radius: 0.75rem;
-  }
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0c0c0c 0%, #00A8E8 150%);
+  color: #eae7e78a;
+  margin: 0;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+h1, h2 {
+  color: #aa0489;
+  text-shadow: 0 0 5px #ff007c;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.gradient-bg {
-  background: linear-gradient(135deg, #00C9FF 0%, #00A8E8 100%);
+header img {
+  width: 140px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ffe0;
 }
 
-.glass-effect {
-  background: rgba(22, 28, 41, 0.5);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+section {
+  background-color: rgba(8, 8, 8, 0.911);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #ff007c;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #111;
 }
 
-.floating-animation {
-  animation: float 6s ease-in-out infinite;
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+li {
+  padding: 0.4rem 0;
+  border-bottom: 1px dotted #f4eeee;
 }
 
-.pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite alternate;
+a {
+  color: #00ffe0;
+  text-decoration: none;
 }
 
-@keyframes pulse-glow {
-  from {
-    box-shadow: 0 0 15px rgba(0, 201, 255, 0.3);
-  }
-  to {
-    box-shadow: 0 0 25px rgba(0, 201, 255, 0.6);
-  }
+a:hover {
+  text-shadow: 0 0 5px #ff007c;
 }
 
-html {
-  scroll-behavior: smooth;
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ffe0;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #00ffe0;
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.03) rotate(0.5deg);
+  box-shadow: 0 0 15px #ff007c;
+}
+
+#download a {
+  display: inline-block;
+  background: #ff007c;
+  color: #0f0f0f;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff007c;
+}
+#download a:hover {
+  background: #ff3399;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  color: #faf8f8;
+  font-size: 0.85rem;
 }
